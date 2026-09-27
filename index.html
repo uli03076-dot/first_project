@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Змейка 3D</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="view"></div>
+
+    <div class="hud">
+      <div class="panel identity">
+        <p class="title">Змейка 3D</p>
+        <p class="sub">Остров · боты · офлайн</p>
+      </div>
+      <div class="panel stats">
+        <div><span>Счёт</span><b id="score">0</b></div>
+        <div><span>Длина</span><b id="length">12</b></div>
+        <div><span>Рекорд</span><b id="high-score">0</b></div>
+      </div>
+      <div class="panel effects" id="effects"></div>
+    </div>
+
+    <aside class="legend panel">
+      <p>Пища</p>
+      <ul>
+        <li><i class="dot apple"></i>Яблоко · рост</li>
+        <li><i class="dot berry"></i>Ягода · скорость</li>
+        <li><i class="dot gold"></i>Золото · бонус</li>
+        <li><i class="dot fish"></i>Рыба · у воды</li>
+        <li><i class="dot cactus"></i>Кактус · в песке</li>
+        <li><i class="dot egg"></i>Яйцо · длина</li>
+        <li><i class="dot shroom"></i>Мухомор · вред</li>
+      </ul>
+    </aside>
+
+    <div class="leaderboard panel">
+      <p>Остров</p>
+      <ol id="board"></ol>
+    </div>
+
+    <p class="hint">Мышь / касание — куда ползти · A D или стрелки — доворот · Shift — рывок</p>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <p class="kicker">Остров змей</p>
+        <h1 id="overlay-title">Змейка 3D</h1>
+        <p id="overlay-text">Плавное управление, разная пища и боты на одном поле — так же, как в будущей онлайн-игре.</p>
+        <button id="start-btn" type="button">Играть</button>
+      </div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
